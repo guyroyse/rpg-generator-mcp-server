@@ -1,0 +1,23 @@
+{
+  "name": "down-with-mcp",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Guy Royse <guy@guy.dev> (https://guy.dev/)",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
+  "private": true,
+  "ts-node": {
+    "esm": true
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
