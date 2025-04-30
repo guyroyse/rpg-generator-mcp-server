@@ -1,5 +1,5 @@
 {
-  "name": "down-with-mcp",
+  "name": "fantasy-region-mcp-server",
   "description": "",
   "version": "1.0.0",
   "author": "Guy Royse <guy@guy.dev> (https://guy.dev/)",
@@ -9,11 +9,12 @@
     "dist"
   ],
   "bin": {
-    "down-with-mcp": "./dist/main.js"
+    "fantasy-region-mcp-server": "./dist/main.js"
   },
   "scripts": {
     "dev": "tsx src/main.ts",
-    "build": "tsc && npm pack && npm install -g ./down-with-mcp-1.0.0.tgz"
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/main.ts",
+    "build": "tsc && npm pack && npm install -g ./fantasy-region-mcp-server-1.0.0.tgz"
   },
   "private": true,
   "ts-node": {
@@ -27,7 +28,6 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.10.2",
-    "redis": "^5.0.0",
     "zod": "^3.24.3"
   }
 }

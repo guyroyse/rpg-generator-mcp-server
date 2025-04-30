@@ -3,7 +3,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { generateRegionText } from './region-generator.js'
 
 const server = new McpServer({
-  name: 'TTRPG Campaign Generator',
+  name: 'TTRPG Random Generators',
   version: '1.0.0'
 })
 

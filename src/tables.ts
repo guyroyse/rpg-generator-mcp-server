@@ -451,7 +451,7 @@ export const regions: RegionTagTable = {
       'Phenomenon where sounds occasionally repeat with altered meaning, as if the land itself is communicating.'
   },
   '100': {
-    tag: ' Vitality Springs',
+    tag: 'Vitality Springs',
     description:
       'Natural wellsprings of life energy that can heal wounds, extend youth, or cause rapid growth in plants.'
   }
