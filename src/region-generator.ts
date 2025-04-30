@@ -83,8 +83,12 @@ function generatePopulationLevel(): PopulationLevel {
 }
 
 function generatePopulationCharacteristic(): PopulationCharacteristic {
-  const roll = randomNumber(8)
-  return populationCharacteristics[roll.toString()]
+  const firstRoll = randomNumber(6)
+  const secondRoll = randomNumber(6)
+  const thirdRoll = randomNumber(6)
+  const totalRoll = firstRoll + secondRoll + thirdRoll
+
+  return populationCharacteristics[totalRoll.toString()]
 }
 
 function randomNumber(max: number): number {
@@ -582,44 +586,84 @@ const populationLevels: PopulationLevelTable = {
 }
 
 const populationCharacteristics: PopulationCharacteristicsTable = {
-  '1': {
-    characteristic: 'Isolated',
-    description:
-      'This population has minimal contact with outsiders and has developed unique customs, dialects, or abilities. They may be suspicious of strangers or have unusual traditions.'
-  },
-  '2': {
-    characteristic: 'Diverse',
-    description:
-      'An unusually mixed population of different races, cultures, or even planar origins. The settlement likely has multiple quarters with distinct architectural styles and customs.'
-  },
   '3': {
-    characteristic: 'Specialized',
+    characteristic: 'Exiles',
     description:
-      'The population focuses heavily on a single industry, craft, magical discipline, or resource. Most inhabitants have at least basic skills related to this specialty.'
+      'The population consists primarily of people who were forced from their original homes. They may be political refugees, survivors of a disaster, or outcasts who formed their own community. They often maintain some customs from their original culture while developing new traditions born of adversity.'
   },
   '4': {
-    characteristic: 'Religious',
+    characteristic: 'Conquered People',
     description:
-      'The population is centered around a religious site, tradition, or deity. Temple complexes dominate the architecture, and religious law may supersede civil authority.'
+      'This population was subjugated by an outside force in the past and still bears the cultural scars. Though perhaps now independent, their architecture, language, and customs show clear influence from their former rulers, and attitudes toward outsiders may be colored by this history.'
   },
   '5': {
-    characteristic: 'Militarized',
+    characteristic: 'Isolationists',
     description:
-      'Whether due to external threats or martial culture, a significant portion of the population serves in a military or defensive capacity, with fortifications and training grounds being common.'
+      "Through choice or necessity, this population has minimal contact with the outside world. They're likely suspicious of strangers, have unique dialects or customs, and may possess knowledge or techniques that have died out elsewhere. Their isolation might be geographic, political, or due to religious beliefs."
   },
   '6': {
-    characteristic: 'Secretive',
+    characteristic: 'Deeply Religious',
     description:
-      "The population harbors significant secrets, possibly concealing their true nature, political allegiances, or an ancient artifact/entity. Outsiders are kept at arm's length."
+      'Faith dominates daily life for this population. Their settlement is organized around temples or shrines, religious leaders hold significant authority, and religious observances punctuate the calendar. Their faith might be mainstream or an unusual sect with distinctive practices.'
   },
   '7': {
-    characteristic: 'Magically Altered',
+    characteristic: 'Specialized Crafters',
     description:
-      'The population has been changed by magical forces, environmental factors, or divine intervention, resulting in unusual traits, appearances, or abilities.'
+      'The population is known for exceptional skill in a particular craft or industry. Most inhabitants have at least basic proficiency in this specialty, which might be metallurgy, textiles, woodworking, shipbuilding, alchemy, or another valuable trade that forms the core of their economy and identity.'
   },
   '8': {
+    characteristic: 'Frontier Settlers',
+    description:
+      "Occupying the edge of civilized lands, this hardy population has adapted to life with minimal outside support. They're typically self-sufficient, practical, and accustomed to defending themselves. Their settlements may be newer and still establishing permanent structures and traditions."
+  },
+  '9': {
+    characteristic: 'Traditional',
+    description:
+      'The population maintains customs and practices that have remained largely unchanged for generations. They value stability and continuity, possibly resisting innovation or outside influence. Elders are respected for their knowledge of traditions, and time-honored methods are preferred over new approaches.'
+  },
+  '10': {
+    characteristic: 'Trade Focused',
+    description:
+      'Commerce is the lifeblood of this population. Their settlement likely sits at a crossroads, river junction, or natural harbor. They welcome travelers, maintain multiple languages, and have adopted practices and goods from various cultures. Merchant guilds may hold significant political power.'
+  },
+  '11': {
     characteristic: 'Hierarchical',
     description:
-      'The population has a rigid social structure with clear divisions between classes, castes, or other groupings. Status symbols and displays of rank are extremely important.'
+      "A clear social structure defines this population, with distinct classes or castes determining one's opportunities and obligations. This hierarchy might be based on birth, wealth, occupation, or demonstrated skill. Social mobility may be limited, with visible markers of status such as clothing or jewelry."
+  },
+  '12': {
+    characteristic: 'Diverse Origins',
+    description:
+      'Unlike most settlements with a dominant cultural group, this population comprises multiple distinct ethnicities or races. The community may be highly integrated or divided into enclaves, but the mixture creates a unique local culture blending elements from various traditions.'
+  },
+  '13': {
+    characteristic: 'Military Tradition',
+    description:
+      'Martial skills are highly valued, with many citizens receiving combat training regardless of their primary occupation. This might stem from a history of conflict, strategic location, or cultural values. Martial accomplishments bring prestige, and military leaders often hold political authority as well.'
+  },
+  '14': {
+    characteristic: 'Knowledge Keepers',
+    description:
+      "The preservation and advancement of knowledge is central to this population's identity. They maintain libraries, schools, or oral traditions, and scholars enjoy high status. Education may be widely available or restricted to certain classes, but intellectual achievement is respected throughout society."
+  },
+  '15': {
+    characteristic: 'Resource Bound',
+    description:
+      "The population's way of life revolves around a single critical resource found in their region. This might be a valuable trade good, essential food source, or material with special properties. Their settlement patterns, social structure, and customs have developed around harvesting, processing, and protecting this resource."
+  },
+  '16': {
+    characteristic: 'Tribal Structure',
+    description:
+      'Extended family bonds form the foundation of social organization. The population is divided into clans or tribes with distinct identities, territories, and sometimes specializations. Leadership may be hereditary or determined by merit within each group, with a council of representatives handling matters affecting the entire community.'
+  },
+  '17': {
+    characteristic: 'Ancient Lineage',
+    description:
+      'This population traces its history back to a legendary founder, noble house, or heroic figure. They take pride in this heritage, which may confer actual or perceived special qualities or responsibilities. Family histories are meticulously maintained, and ancestral achievements influence present-day status.'
+  },
+  '18': {
+    characteristic: 'Adapted to Hardship',
+    description:
+      'The population has survived extreme adversity—whether environmental challenges, persistent threats, or periodic disasters—developing unusual customs and skills as a result. Their adaptations might appear strange to outsiders but are perfectly suited to their specific circumstances.'
   }
 }
