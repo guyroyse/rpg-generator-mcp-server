@@ -5,10 +5,15 @@
   "author": "Guy Royse <guy@guy.dev> (https://guy.dev/)",
   "license": "MIT",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "down-with-mcp": "./dist/main.js"
+  },
   "scripts": {
     "dev": "tsx src/main.ts",
-    "build": "tsc",
-    "start": "node dist/main.js"
+    "build": "tsc && npm pack && npm install -g ./down-with-mcp-1.0.0.tgz"
   },
   "private": true,
   "ts-node": {
@@ -19,5 +24,10 @@
     "prettier": "^3.5.3",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2",
+    "redis": "^5.0.0",
+    "zod": "^3.24.3"
   }
 }
