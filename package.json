@@ -1,5 +1,5 @@
 {
-  "name": "fantasy-region-mcp-server",
+  "name": "rpg-generator-mcp-server",
   "description": "",
   "version": "1.0.0",
   "author": "Guy Royse <guy@guy.dev> (https://guy.dev/)",
@@ -9,12 +9,12 @@
     "dist"
   ],
   "bin": {
-    "fantasy-region-mcp-server": "./dist/main.js"
+    "rpg-generator-mcp-server": "./dist/main.js"
   },
   "scripts": {
     "dev": "tsx src/main.ts",
     "inspect": "npx @modelcontextprotocol/inspector tsx src/main.ts",
-    "build": "tsc && npm pack && npm install -g ./fantasy-region-mcp-server-1.0.0.tgz"
+    "build": "tsc && npm pack && npm install -g ./rpg-generator-mcp-server-1.0.0.tgz"
   },
   "private": true,
   "ts-node": {
