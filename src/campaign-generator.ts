@@ -6,7 +6,7 @@ type Campaign = {
 
 export function generateCampaignText() {
   const campaign = generateCampaign()
-  return `The players are ${campaign.characters} adventuring in a ${campaign.setting} setting experiencing events similar to to movie ${campaign.plot}.`
+  return `The players are ${campaign.characters} adventuring in a ${campaign.setting} setting experiencing events similar to the movie ${campaign.plot}.`
 }
 
 function generateCampaign(): Campaign {
