@@ -1,40 +1,15 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
+import { z } from 'zod'
 
-import { generateCampaignText } from './campaign-generator.js'
-import { generateRegionText } from './region-generator.js'
+import { setUpCampaignGenerator } from './campaign-generator.js'
+import { setUpHexGenerator } from './hex-generator.js'
 
 const server = new McpServer({
   name: 'TTRPG Random Generators',
   version: '1.0.0'
 })
 
-server.tool('random_campaign_idea', 'Generate a random campaign idea for a TTRPG', {}, async () => {
-  const campaignText = generateCampaignText()
-  return {
-    content: [
-      {
-        type: 'text',
-        text: campaignText
-      }
-    ]
-  }
-})
-
-server.tool(
-  'random_region_attributes',
-  'Generate random region attributes for a TTRPG fantasty world setting',
-  {},
-  async () => {
-    const regionText = generateRegionText()
-    return {
-      content: [
-        {
-          type: 'text',
-          text: regionText
-        }
-      ]
-    }
-  }
-)
+setUpCampaignGenerator(server)
+setUpHexGenerator(server)
 
 export default server
